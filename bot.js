@@ -34,3 +34,18 @@ controller.hears(['database', 'populate database', 'migrate and seed', 'seed'],[
 
   bot.reply(message,'php artisan migrate:refresh --seed');
 });
+
+controller.hears(['laravel composer', 'lcom', 'new project'],['direct_message','direct_mention','mention'],function(bot,message) {
+
+  bot.reply(message,'composer create-project laravel/laravel {directory} "~5.0.0" --prefer-dist');
+});
+
+controller.hears(['laravel cache routes', 'route caching'],['direct_message','direct_mention','mention'],function(bot,message) {
+
+  bot.reply(message,'php artisan route:cache');
+});
+
+controller.hears(['laravel generate auth', 'auth'],['direct_message','direct_mention','mention'],function(bot,message) {
+
+  bot.reply(message,'php artisan make:auth');
+});
