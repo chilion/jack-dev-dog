@@ -32,7 +32,7 @@ controller.hears(['howto migrate', 'migrate'],['direct_message','direct_mention'
 });
 controller.hears(['database', 'populate database', 'migrate and seed', 'seed'],['direct_message','direct_mention','mention'],function(bot,message) {
 
-  bot.reply(message,'php artisan migrate:refresh --seed');
+  bot.reply(message,'delete complete database \n php artisan migrate:refresh --seed');
 });
 
 controller.hears(['laravel composer', 'lcom', 'new project'],['direct_message','direct_mention','mention'],function(bot,message) {
@@ -49,3 +49,10 @@ controller.hears(['laravel generate auth', 'auth'],['direct_message','direct_men
 
   bot.reply(message,'php artisan make:auth');
 });
+
+controller.hears(['hoe krijg ik die scheitzooi weer werkend', 'mac dennis'],['direct_message','direct_mention','mention'],function(bot,message) {
+
+  bot.reply(message,'git fetch upstream \n git merge upstream/development \n delete complete database \n composer update \n composer dump-autoload \n php artisan migrate:refresh --seed');
+});
+
+
