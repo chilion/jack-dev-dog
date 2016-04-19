@@ -1,7 +1,8 @@
-#Slack Bot George
+## This is Jack.
+![Jack the Dev Dog](http://www.chilion.nl/cdn/jack.jpg)
 
-Want to add some message? Go ahead, fork, pull request it.
+Jack is a dev dog. He can help you when you forgot the exact command to git pull or gulp watch. Or something else, depending on what you learn him.
 
-#DO NOT
-Add bullshit, bullcrap, nonsense or any kind of jokes. Only REAL dev related messages that you can use.
+Want to add some commands? Go ahead, fork, pull request it.
+
 
