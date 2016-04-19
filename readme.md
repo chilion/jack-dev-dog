@@ -1,4 +1,4 @@
-#Slack Bot George
+#Slack Dog Jack
 
 Want to add some message? Go ahead, fork, pull request it.
 
