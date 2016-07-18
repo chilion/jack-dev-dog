@@ -41,6 +41,10 @@ controller.hears(['laravel generate auth', 'auth'],['direct_message','direct_men
   bot.reply(message,'php artisan make:auth');
 });
 
+controller.hears(['database dump', 'dump db'],['direct_message','direct_mention','mention'],function(bot,message) {
+  bot.reply(message,'mysqldump -u root -p databasename > databasename.sql');
+});
+
 controller.hears(['hoe krijg ik die scheitzooi weer werkend', 'mac dennis'],['direct_message','direct_mention','mention'],function(bot,message) {
   bot.reply(message,'git fetch upstream \n git merge upstream/development \n delete complete database \n composer update \n composer dump-autoload \n php artisan migrate:refresh --seed');
 });
@@ -63,7 +67,7 @@ controller.hears(['tell me a joke'], ['ambient', 'direct_message'], function(bot
   bot.startConversation(message,function(err,convo) {
 
       var request = require('request');
-      request('http://api.icndb.com/jokes/random?firstName=John&lastName=Doe', function (error, response, body) {
+      request('http://api.icndb.com/jokes/random?firstName=Koning&lastName=CJ.', function (error, response, body) {
         if (!error && response.statusCode == 200) {
           var sbody = JSON.parse(body)
           convo.say(sbody.value.joke);
